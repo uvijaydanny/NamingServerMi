@@ -13,7 +13,7 @@ stages{
         
         stage('Run') {
         	steps {
-        		bat "docker run -p 8761:8761 -d namingserver:${env.BUILD_ID}"
+        		bat "docker run --name eureka-server -p 8761:8761 -d namingserver:${env.BUILD_ID}"
         	}
         }
     }
