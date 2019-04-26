@@ -9,14 +9,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class NamingServerApplication extends SpringBootServletInitializer{
+public class NamingServerApplication {
 
-	@Override
-	  protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-	      return builder.sources(NamingServerApplication.class);
-	  }
-
-	
 	public static void main(String[] args) {
 		SpringApplication.run(NamingServerApplication.class, args);
 	}
